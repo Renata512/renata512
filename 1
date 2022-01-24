@@ -1,0 +1,61 @@
+//Координаты на плоскости и в пространстве
+place = Decart ( x, y,[z] );
+place = Polar( radius, angle, [z] );
+
+//Линии и векторы
+Point ( place );
+Line ( startPlace, endPlace );
+Vect ( startPlace, endPlace );
+Circle ( radius, place, [lookAt] );
+Arc ( radius, startAngle, angle, place, [lookAt] );
+
+//Плоские фигуры
+Triangle ( aPlace, bPlace, cPlace );
+
+//Тела
+Box ( place, xSize, ySize, zSize, [lookAt], [zAngle] );
+Sphere ( place, radius );
+Cylinder ( place, topRadius, bottomRadius ,height, [lookAt] );
+Torus ( place, mainRadius, tubeRadius, [lookAt] );
+
+//Метки и комментарии
+MarkLine ( startPlace, endPlace, marksCount );
+MarkAngle( firstPlace, basePlace, secondPlace, marksCount );
+Label ( place, text );
+Message ( text );
+
+//Управление координатами
+Coord ( );
+SetCoord ( place, [lookAt],[zAngle] );
+
+//Цвета и прозрачность
+color : GRAY, RED, GREEN, BLUE, YELLOW, MAGENTA, GYAN, BROWN
+transparent : NORMAL, GLASS, CHOST
+SetPointColor ( color );
+SetLineColor ( color );
+SetObjectColor( color );
+SetTriangleColor ( color );
+SetMarkColor ( color );
+SetTransparent ( transparent );
+
+//Управление слайдами
+SetVisible ( startSlide, endSlide );
+
+//Тригонометрия
+PI = 3.14 ...;
+angleInRadians = Rad ( angleInDegrees );
+angleInDegrees = Deg ( angleInRadians );
+Sin ( x ); Cos ( x ); Tan ( x );
+ASin ( x ); ACos ( x ); ATan ( x );
+
+//Степенные функции
+E = 2.71 ...;
+Sqr ( x ); Sqrt( x ); Power( x, y );
+Log ( x ); Exp ( x ); 
+
+//Полезные функции
+Max ( x1, x2, x3, ... ); 
+Min ( x1, x2, x3, ... ); 
+Random ( min, max );
+
+// ** углы везде задаются в радианах !!!
